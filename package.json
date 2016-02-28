@@ -1,0 +1,25 @@
+{
+  "name": "hello-superscript",
+  "version": "1.0.0",
+  "description": "A bot boilerplate to use for getting started with SuperScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silentrob/hello-superscript.git"
+  },
+  "keywords": [
+    "Bots"
+  ],
+  "author": "Rob Ellis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silentrob/hello-superscript/issues"
+  },
+  "homepage": "https://github.com/silentrob/hello-superscript#readme",
+  "dependencies": {
+    "superscript": "^0.11.21"
+  }
+}
