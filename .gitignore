@@ -1,3 +1,5 @@
 node_modules/*
+logs/*
 data.json
 systemDB/*
+telnetFacts/*

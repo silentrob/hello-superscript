@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/silentrob/hello-superscript#readme",
   "dependencies": {
+    "mongoose": "^4.4.5",
+    "sfacts": "^0.1.0",
     "superscript": "^0.11.21"
   }
 }
