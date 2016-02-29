@@ -99,7 +99,15 @@ If we add a trigger like:
 This will pass in `*1` into the function as `<cap1>` becoming the `city` param inside the function.
 
 *NB* 
+
 All functions exported inside the plugin folder automatically become available as plugins to the system.
+
+*NB2* 
+
+The plugin callback above shows 2 return params, `error` and `reply` If there is a error, it will not display anything and exit the matching loop. If the `reply` is a string, it becomes the reply we send to the user. If the `reply` is a Object with a `text` or `reply` property, that will become the reply string and all other properties will become OOB (Out of Bound) data. There is also a third param which is a boolean (true/false) value that tells the system to stop matching or keep matching for more.
+
+
+
 
 
 
