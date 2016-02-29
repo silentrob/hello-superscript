@@ -66,4 +66,40 @@ Lets fire up the client by running `node telnet.js`
 
 And in a new window lets chat with it by running `telnet 127.0.0.1 2000`
 
+### Adding a plugin.
+
+More information about Plugins can be found here - https://github.com/silentrob/superscript/wiki/Plugins-and-Functions
+
+Plugins are designed to break out of the scripting interface and allow you to do whatever you want using JavaScript and NPM.
+
+Some general ideas are :
+* Call external API's
+* Further process input 
+* Save data to some other Database or service
+* Poll to other users (aka Wizard-of-oz)
+
+Lets add the most basic example like the one found at the link above.
+```
+exports.getWeather = function(city, cb) {
+  cb(null, "It is probably sunny in " + city);
+}
+```
+
+I have already copied that plugin and saved/exported it from the `./plugins/example.js` file.
+
+This plugin has two arugments comming in `city` and `cb`. The system *ALWAYS* adds the `cb` for you and *ALWAYS* expects it to be called when you are finished. This allows the system to keep going and not hang waiting forever.
+
+
+If we add a trigger like:
+```
++ what is the weather in *1
+- ^getWeather(<cap1>)
+```
+
+This will pass in `*1` into the function as `<cap1>` becoming the `city` param inside the function.
+
+*NB* 
+All functions exported inside the plugin folder automatically become available as plugins to the system.
+
+
 
