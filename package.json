@@ -4,6 +4,7 @@
   "description": "A bot boilerplate to use for getting started with SuperScript",
   "main": "index.js",
   "scripts": {
+    "reload": "./node_modules/superscript/bin/cleanup.js --mongo telnetbot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

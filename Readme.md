@@ -20,8 +20,10 @@ This example will show you how to create a basic trigger, topic and plugin, and 
 
 ## Basic Workflow
 
+### Pre step
 * You will want to make sure you have `mongo` running, all the conversation and user data is stored in mongo, namely, `Gambits`, `Replies`, `Topics` and `Users`. If you don't yet have Mongo Running, see the first section.
 
+### Compile conversation data
 * Lets compile our first trigger and store that in mongo. I already created the topic folder and ss file see `./topics/main.ss` 
 
 We can compile the data two ways, either by typing `parse` from the command line which generates a intermediate json representation that we can manually import, or by doing a parse and load combind step. Lets do the latter as it removes the need to manually import the JSON file ourselves.
@@ -50,6 +52,10 @@ It should be noted that this task will also cull the existing data before adding
 
 As we can see we have added one Gambit and One Reply as expected. We also have two topics, one called `main`, and one the system creates called `random`.
 
+#### Lets streamline this step
+You can lean on NPM to run commands directly, and I have added that script to the package.json file, so from now on, we can just type: `npm run reload` and it call the cleanup script for us.
+
+### Starting the client
 * Running a client
 
 The next step is to see the bot in action, for that we will fire up our first client and chat with our new bot. SuperScript will work with on any messaging platform. Slack, Telegram, Twilio, IRC, WebSockets or anything that exposes text output and a way to reply.
