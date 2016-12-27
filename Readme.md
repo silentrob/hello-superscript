@@ -28,7 +28,7 @@ This example will show you how to create a basic trigger, topic and plugin, and 
 
 We can compile the data two ways, either by typing `parse` from the command line which generates a intermediate json representation that we can manually import, or by doing a parse and load combind step. Lets do the latter as it removes the need to manually import the JSON file ourselves.
 
-Run `./node_modules/superscript/bin/cleanup.js --mongo telnetbot`
+Run `./node_modules/.bin/cleanup --mongo telnetbot`
 
 We pass in a `--mongo telnetbot` param to say we want to store (and flush) from the telnetbot database in mongo, this is also a handy way to seperate other bots.
 
