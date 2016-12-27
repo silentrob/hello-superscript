@@ -3,14 +3,11 @@
 var net             = require("net");
 var superscript     = require("superscript");
 var mongoose        = require("mongoose");
-var facts           = require("sfacts");
-var factSystem      = facts.create('telnetFacts');
 mongoose.connect('mongodb://localhost/telnetbot');
 
 var options = {};
 var sockets = [];
 
-options['factSystem'] = factSystem;
 options['mongoose'] = mongoose;
 
 var botHandle = function(err, bot) {
@@ -84,6 +81,6 @@ var botHandle = function(err, bot) {
 
 
 // Main entry point
-new superscript(options, function(err, botInstance){
+new superscript.setup(options, function(err, botInstance){
   botHandle(null, botInstance);
 });

@@ -1,6 +1,6 @@
-> topic:keep main
+> topic main {keep}
 
-  + ~emohello
+  + hello
   - Hello World
 
   + what is the weather in *1

@@ -5,7 +5,7 @@ Welcome to the wonderful world of building chatbots!
 
 ### Getting the enviroment setup
 
-We will assume you already have Node and NPM installed. To use SuperScript you need to make sure you have Node 0.12.x installed. Later version do not work yet.
+We will assume you already have Node and NPM installed. To use SuperScript you need to make sure you have Node 6.x installed.
 
 SuperScript also requires MongoDB - You can download and install Mongo from `https://www.mongodb.org/downloads#production`
 
@@ -24,7 +24,7 @@ This example will show you how to create a basic trigger, topic and plugin, and 
 * You will want to make sure you have `mongo` running, all the conversation and user data is stored in mongo, namely, `Gambits`, `Replies`, `Topics` and `Users`. If you don't yet have Mongo Running, see the first section.
 
 ### Compile conversation data
-* Lets compile our first trigger and store that in mongo. I already created the topic folder and ss file see `./topics/main.ss` 
+* Lets compile our first trigger and store that in mongo. I already created the topic folder and ss file see `./chat/main.ss` 
 
 We can compile the data two ways, either by typing `parse` from the command line which generates a intermediate json representation that we can manually import, or by doing a parse and load combind step. Lets do the latter as it removes the need to manually import the JSON file ourselves.
 
